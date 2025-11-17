@@ -1,7 +1,7 @@
 **Mohammed Yasin**
 # String Theory
 
-    this is a very good attempt to unify the natural forces:
+    This is a very good attempt to unify the natural forces:
         - Gravity (The hassle one!)
             - The story of an apple nailing a man's forehead.
                 - Cause our the biggest problem; the others are okey.
