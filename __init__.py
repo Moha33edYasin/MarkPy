@@ -11,6 +11,8 @@ EXTENDED_HEADERS = {}#{'ul' : 'li'}
 # static tags
 PRAGRAPH_TAG = 'p'
 BREAK_TAG = 'br'
+BREAK_AFTER = 2 
+BREAK_WHITESPACE = ' ' 
 
 
 with open('settings') as f:

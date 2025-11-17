@@ -46,7 +46,8 @@ class HTMLExtended(HTMLElement):
         for i in self.lines:
             if type(i) == int:
                 row = ''.join([part.render() for part in inline_html[i]])
-                if len(self.lines) > 1: row += self.line_end
+                if len(self.lines) > 1 and row[-BREAK_AFTER:] == BREAK_WHITESPACE * BREAK_AFTER: 
+                    row += self.line_end
                 
                 if self.sub_tag != None:
                     element = HTMLElement(self.sub_tag, row)
