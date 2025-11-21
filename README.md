@@ -1,6 +1,6 @@
 Hello, here is a markup lang with your style.  
 Type your settings in the settings file in the following format:  
-[1nd mark] [tag] [2nd mark] [3rd mark] [4th mark] [key]  
+[1st mark] [tag] [2nd mark] [3rd mark] [4th mark] [key]  
 **Notes**:  
     - [1st mark] is required for any token.  
     - [tag] is required HTML element that holds the 1st and 2nd tokens.  
