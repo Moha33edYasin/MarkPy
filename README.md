@@ -1,10 +1,11 @@
-# README h
-
 This is a documentation file for your custom markup language.
 
-## Features h
+## Custom Markup Language
 
-**Features:** b **
+Welcome!
+This document explains how to use the custom markup language defined in this module. It also describes how to configure your own settings and how the parser interprets your markup.
+
+**Features:**
 
 * Simple and human-friendly markup
 * Fully customizable through the settings file
@@ -12,16 +13,16 @@ This is a documentation file for your custom markup language.
 * Indentation-based block structure
 * Easy to extend
 
-## Syntax Overview h
+## Syntax Overview 
 
-**Syntax Format:** b **
+**Syntax Format:**
 Each rule in the settings file follows this format:
 
 ```
 [1st mark] [tag] [2nd mark] [3rd mark] [4th mark] [key]
 ```
 
-**Components:** b **
+**Components:**
 
 * *[1st mark]*: Required primary marker
 * *[tag]*: Required HTML tag
@@ -29,23 +30,23 @@ Each rule in the settings file follows this format:
 * *[3rd mark] & [4th mark]*: Optional markers for extra tag information
 * *[key]*: HTML attribute associated with the 3rd/4th marks
 
-## Examples h
+## Examples
 
-### Header Example h
+### Header Example
 
 ```
-# h
+#h
 ```
 
 Usage:
 
 ```
-# Title
+#Title
 ```
 
 Becomes an h1 element.
 
-### Bold Example h
+### Bold Example
 
 ```
 **b**
@@ -59,7 +60,7 @@ Usage:
 
 Produces bold text.
 
-### Link Example h
+### Link Example
 
 ```
 [ a ] ( ) href
@@ -73,22 +74,22 @@ Usage:
 
 Becomes an anchor element using *href*.
 
-##Configuration h
+## Configuration
 
-**Static Marks:** b **
+**Static Marks:**
 To change the paragraph mark or line-break mark, edit the file:
 
 ```
 init.py
 ```
 
-**Indentation:** b **
+**Indentation:**
 
 * The module is indentation-sensitive
 * Indentation defines block structure
 * 1 indent = 4 spaces
 
-## Demo Files h
+## Demo Files
 
 Check the following for concrete usage examples:
 
