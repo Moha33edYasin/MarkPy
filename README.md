@@ -1,6 +1,3 @@
-## Welcome!
-This is a documentation file for your custom markup language.
-
 ## Custom Markup Language
 
 Welcome!
