@@ -1,18 +1,96 @@
-Hello, here is a markup lang with your style.  
-Type your settings in the settings file in the following format:  
-[1st mark] [tag] [2nd mark] [3rd mark] [4th mark] [key]  
-**Notes**:  
-    - [1st mark] is required for any token.  
-    - [tag] is required HTML element that holds the 1st and 2nd tokens.  
-    - [2nd mark] is for any additional enclosed markers you want to add.  
-    - [3rd and 4th marks] are optional enclosed tokens that provide extra information for the HTML tag (such as links, images, ...etc).  
-    - [key] is any html args that holds 3rd and 4th token.  
-    - Don't forget spearate your arguments with spaces.  
-      *Examples*:  
-          1. # h (means '#Title' is a header of type 1)  
-          2. ** b ** (means '**text**' is a bold text)  
-          3. [ a ] ( ) href (means '[link name](url)' is a link)  
-    - To change static marks (pragraph mark and line break mark), go to __init__.py.  
-    - The module is indent-sensitive, which is used to determine elements belong block.  
-    - 1 indent = 4 spaces.  
-    - look at demo.py and demo.txt files if want a concrete example.  
+# README h
+
+This is a documentation file for your custom markup language.
+
+## Features h
+
+**Features:** b **
+
+* Simple and human-friendly markup
+* Fully customizable through the settings file
+* Supports HTML attributes, links, images, and nested markers
+* Indentation-based block structure
+* Easy to extend
+
+## Syntax Overview h
+
+**Syntax Format:** b **
+Each rule in the settings file follows this format:
+
+```
+[1st mark] [tag] [2nd mark] [3rd mark] [4th mark] [key]
+```
+
+**Components:** b **
+
+* *[1st mark]*: Required primary marker
+* *[tag]*: Required HTML tag
+* *[2nd mark]*: Optional additional marker
+* *[3rd mark] & [4th mark]*: Optional markers for extra tag information
+* *[key]*: HTML attribute associated with the 3rd/4th marks
+
+## Examples h
+
+### Header Example h
+
+```
+# h
+```
+
+Usage:
+
+```
+# Title
+```
+
+Becomes an h1 element.
+
+### Bold Example h
+
+```
+**b**
+```
+
+Usage:
+
+```
+**text**
+```
+
+Produces bold text.
+
+### Link Example h
+
+```
+[ a ] ( ) href
+```
+
+Usage:
+
+```
+[Google](https://google.com)
+```
+
+Becomes an anchor element using *href*.
+
+##Configuration h
+
+**Static Marks:** b **
+To change the paragraph mark or line-break mark, edit the file:
+
+```
+init.py
+```
+
+**Indentation:** b **
+
+* The module is indentation-sensitive
+* Indentation defines block structure
+* 1 indent = 4 spaces
+
+## Demo Files h
+
+Check the following for concrete usage examples:
+
+* demo.py
+* demo.txt
