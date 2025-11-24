@@ -25,7 +25,7 @@ class HTMLElement():
                 if child: child.parent = self
             self.children += new_children
         else:
-            print(f"Some or all of the given children are already children of ({self}).")
+            print(f"(!) Some or all of the given children are already children of ({self}).")
 
     def render(self):
         data = ' '.join([f"{k}=\'{v}\'" for k, v in self.data.items()])
@@ -47,6 +47,7 @@ class HTMLExtended(HTMLElement):
             if type(i) == int:
                 row = ''.join([part.render() for part in inline_html[i]])
                 if len(self.lines) > 1 and row[-BREAK_AFTER:] == BREAK_WHITESPACE * BREAK_AFTER: 
+                    row = row.rstrip(BREAK_WHITESPACE * BREAK_AFTER)
                     row += self.line_end
                 
                 if self.sub_tag != None:
@@ -75,7 +76,7 @@ class EmptyElement():
                 if child: child.parent = self
             self.children += new_children
         else:
-            print(f"Some or all of the given children are already children of ({self}).")
+            print(f"(!) Some or all of the given children are already children of ({self}).")
 
     def render(self):
         children = ''.join([child.render() for child in self.children])
@@ -113,12 +114,16 @@ class Render():
         
         for i, line in enumerate(self.txt):
             if line:
-                ls = line.lstrip()
-                repeat = vcount(ls)
                 indent = icount(line)
-                m = ls[0] if indent else line[0]
+                ls = line.lstrip() if indent else line
+                repeat = vcount(ls)
+                m = ls[0]
+
                 header = VOID_MAP.get(m)
-                
+                if not AUTO_WHITESPACE_PROCESS and header != None:
+                    if ls.lstrip(m)[0] != SPACE:
+                        header = 'misformat'
+                        print(f'(!) line-{i}:\n{self.txt[i]}\n got a misformated mark ({m}).') 
                 # test if there is any single-line header
                 if header in LINEAR_HEADERS:
                     block = HTMLExtended(tag=f'{header}{repeat}' if repeat else header)        
@@ -193,12 +198,23 @@ class Render():
 
     def render_veiw(self):
         inline_html = []
-
+        is_false = False
+        
         for line in self.txt:
-            for vm in VOID_MARKS:
-                line = line.lstrip(vm)
+            # striping out void marks from the line
             if line:
+                m = line.lstrip()[0]
+                if m in VOID_MARKS:
+                    if not AUTO_WHITESPACE_PROCESS:
+                        if line.lstrip().lstrip(m)[0] == SPACE:
+                            line = line.lstrip(m)
+                        else:
+                            is_false = True
+                else:
+                    is_false = False
                 row_html = self.split_line(line)
+                if is_false:            
+                    row_html[0].token = m + row_html[0].token 
                 inline_html.append(row_html)
             else:
                 inline_html.append([EmptyElement('\n')])
@@ -208,6 +224,7 @@ class Render():
         
         # render
         self.html += '\n'.join([block.render() for block in self.html_blocks])
+        print(f'(*) The file is successfully rendered into html.')
 
     def write(self, path):
         if not self.html:
@@ -218,3 +235,4 @@ class Render():
         except:
             with open(path, 'x') as f:
                 f.write(self.html)
+        print(f"(*) The html is written at [{path}].")

@@ -12,7 +12,13 @@ EXTENDED_HEADERS = {}#{'ul' : 'li'}
 PRAGRAPH_TAG = 'p'
 BREAK_TAG = 'br'
 BREAK_AFTER = 2 
-BREAK_WHITESPACE = ' ' 
+BREAK_WHITESPACE = ' '
+AUTO_WHITESPACE_PROCESS = True # means any space misformatting after a mark will be ignored.
+# False: will make the model sensitive to any space, like:
+# '#heading' is a misformat and it will be a pragarph by default
+# '# heading' is the correct format.
+
+SPACE = ' ' 
 
 
 with open('settings') as f:
