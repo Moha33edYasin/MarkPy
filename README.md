@@ -14,7 +14,7 @@ This document explains how to use the custom markup language defined in this mod
 ## Syntax Overview 
 
 **Syntax Format:**
-Each rule in the settings file follows this format:
+Each rule in *the settings* file follows this format:
 
 ```
 [1st mark] [tag] [2nd mark] [3rd mark] [4th mark] [key]
