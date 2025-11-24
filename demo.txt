@@ -1,21 +1,20 @@
 **Mohammed Yasin**
 # String Theory  
 
-    this is a very good attempt to unify the natural forces:
+    This is a very good attempt to unify the natural forces:
         - Gravity (The hassle one!)
             - The story of an apple nailing a man's forehead.
-                - Cause our the biggest problem; the others are okey.
+                - It actually the biggest stone in the way; the others are okey.
         - Electromagnetic force
-            - when electric fields dance with magnetic ones
+            - When electric fields dance with magnetic ones.
         - Strong nuclear
-            - I don't excatly know, but it relate to nuclear particals.
+            - I don't excatly know what it is, but it relates to the nuclear particals.
         - Weak nuclear
             - same here.
 
 ## The good news are:
-    And at least, it make it for a universe with 11 dimension.
-Physicists and mathematician are trying to fit it wit context of our observable universe
-this what is so-call: ** Everything theory ** 
+    At least, it make it for a universe with 11 dimension.
+Physicists and mathematician are trying to use some witty and perhaps Potter's magic wand to fit the theory to the context of our observable universe in what they so-called it: ** Everything theory **
 
 #### References
 [Wikipedia](https://en.wikipedia.org/wiki/String_theory)
