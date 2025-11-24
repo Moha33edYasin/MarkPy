@@ -26,7 +26,7 @@ Each rule in the *settings* file follows this format:
 * *[tag]*: Required HTML tag
 * *[2nd mark]*: Optional additional marker
 * *[3rd mark] & [4th mark]*: Optional markers for extra tag information
-* *[key]*: HTML attribute associated with the 3rd/4th marks
+* *[key]*: HTML attribute associated with the 3rd and 4th marks
 
 ## Examples
 
